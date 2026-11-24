@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import ConstructionNotice from "@/components/ConstructionNotice";
 
 export const metadata: Metadata = {
   title: "AinCopilot BD · আইন কপাইলট",
@@ -18,7 +19,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <ConstructionNotice />
+      </body>
     </html>
   );
 }
